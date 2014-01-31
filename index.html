@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<head>
+<script src="js/jquery-2.0.3.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Nosifer|Monofett|Exo+2:400,300,200|Metrophobic|Audiowide|Krona+One|Raleway+Dots' rel='stylesheet' type='text/css'>
+<style>
+
+body {
+		max-width: 600px;
+		margin: 0 auto;
+		background: rgb(239, 242, 245);
+}
+div {
+		font-family: 'Exo 2', sans-serif;
+		font-weight: 300;
+}
+
+h1 {
+		font-family: 'Monofett', cursive;
+		text-align: center;
+  font-size: 75px;
+  color: #404040;
+  margin: 50px 0 0 0;
+}
+h2 {
+  font-family: 'Raleway Dots', cursive;
+		text-align: center;
+  font-size: 20px;
+  color: #888;
+  margin: 5px 0 60px 0;
+}
+p {
+		position: absolute;
+		padding: 15px;
+		margin: 0 0 0 0;
+}
+small {
+}
+	
+.cover_photo {
+		position: relative;
+		background-size: cover;
+		width: 600px;
+		height: 200px;
+		margin: 60px 0 0 0;
+}
+#cover_jul2013	{
+		background-image: url('img/jul2013.JPG');
+}
+#cover_jun2013	{
+		background-image: url('img/jun2013.JPG');
+}
+#cover_dec2012	{
+		background-image: url('img/dec2012.JPG');
+}
+#cover_aug2012	{
+		background-image: url('img/aug2012.JPG');
+}
+#cover_may2012	{
+		background-image: url('img/may2012.JPG');
+}
+#cover_mar2012	{
+		background-image: url('img/mar2012.JPG');
+}
+
+.main {
+		position: relative;
+		width: 600px;
+		height: 100px;
+		margin: 0 0 0 0;
+}
+.description {
+		position: relative;
+		background: rgb(239, 242, 245);
+		font-family: 'Exo 2', sans-serif;
+		color: gray;
+		font-size: 15px;
+		width: 580px;
+		height: 50px;
+		margin: 0 0 0 0;
+		border-style: solid;
+		border-width: 10px;
+		border-top-width: 0px;
+		border-color: white;
+}
+	
+.tracklist {
+		position: relative;
+		background: white;
+		font-family: 'Exo 2', sans-serif;
+		font-weight: 200;
+		color: gray;
+		font-size: 13px;
+		width: 600px;
+		height: auto;
+		margin: 0 0 0 0;
+}
+	
+#inner_a {
+		background: white;
+		position: absolute;
+		left: 0px;
+		width: 13%;
+		height: 100%;
+		padding: 20px 0 0 14px;
+}
+#inner_b {
+		background: white;
+		position: absolute;
+		left: 13%;
+		width: 45%;
+		height: 100%;
+		font-weight: 400;
+		color: black;
+		font-size: 23px;
+		padding: 16px 0 0 0;
+}
+#inner_c {
+		background: white;
+		position: absolute;
+		left: 58%;
+		width: 42%;
+		height: 100%;
+}
+
+.timer {
+		position: absolute;
+		padding: 15px;
+		margin: 28px 0 0 0;
+		font-family: 'Exo 2', sans-serif;
+		font-weight: 300;
+		color: gray;
+		font-size: 15px;
+}
+
+.graph_container {
+	 position: absolute;
+		top: 25%;
+		bottom: 25%;
+		width: 20%;
+		background: rgb(239, 242, 245);
+}
+#bargraph_a {
+	left: 10%;
+}
+#bargraph_b {
+	left: 40%;
+}
+#bargraph_c {
+	left: 70%;
+}
+		
+.bar {
+		position: absolute;
+		bottom: 0px;
+		height: 70%;
+		width: 100%;
+		background: rgb(255, 83, 250);
+}
+table {
+		text-align: center;
+		vertical-align: center;
+		padding: 10px;
+		width: 100%;
+		position: relative;
+		top: 62px;
+		font-size: 11px;
+		color: rgb(249,128,242);
+}
+
+.description_span {
+		float: left;
+		position: relative;
+		width: 82%;
+}
+.button_span {
+		float: right;
+		position: relative;
+		width: 18%;
+}
+button {
+		position: absolute;
+		top: 11px;
+		right: 10px;
+		left: 0px;
+		background: rgb(185, 194, 206);
+		outline: none;
+		font-family: 'Exo 2', sans-serif;
+		font-weight: 300;
+		color: white;
+		font-size: 11px;
+	 text-decoration:none;
+	 border: none;
+		border-bottom: 3px solid rgb(156, 164, 172);
+		padding: 4px 6px 4px 6px;
+		cursor: pointer;
+	}
+	
+ol {
+		margin: 0 20px 0 20px;
+		padding: 0 20px 10px 20px;
+		line-height: 1.8;
+}
+
+</style>
+
+</head>
+
+<body>
+	
+<h1>DJ Allonyou</h1>
+<h2>born at EDC, raised by Ruby Skye, and now all grown up</h2>
+
+
+<div id="cover_jul2013" class="cover_photo"></div>	
+	
+<div class="main">
+	<div id="inner_a"><a href="http://thealanyiu.com/music/2013-07%20mix.mp3"><img src="img/play.png"></a></div>
+	<div id="inner_b"><p>July 2013 Mix</p><small class="timer">1hr 5min</small></div>
+	<div id="inner_c"><p>
+
+<div id="bargraph_a" class="graph_container">
+<div class="bar" style="height:70%;"></div>
+</div>
+<div id="bargraph_b" class="graph_container">
+<div class="bar" style="height:30%;"></div>
+</div>
+<div id="bargraph_c" class="graph_container">
+<div class="bar" style="height:20%;"></div>
+</div>
+
+<table class="mixtype" border="0">
+<tr><td>trance</td><td>house&nbsp;</td><td>altern&nbsp;</td></tr>
+</table>	
+		
+</p></div>
+</div>
+
+	
+<div class="description">
+	<span class="description_span"><p>Featuring : &nbsp;&nbsp;Kaskade , Moguai , Above &amp; Beyond , Audien , Tiesto...</p></span>
+	<span class="button_span"><button class="buttons" value="tracklist1">View Tracklist</button></span>
+	</div>
+
+<div id="tracklist1" class="tracklist" style="display:none">
+<ol>
+<li>The Feeling - The Knocks</li>
+<li>We'll Be Coming Back - Calvin Harris feat. Example</li>
+<li>Leaving You - Audien</li>
+<li>Summertime Sadness (Cedric Gervais remix) - Lana del Rey</li>
+<li>Reach the Sun (dub mix) - Beat Service &amp; Susana</li>
+<li>Skylarking (Ilan Bluestone remix) - BT</li>
+<li>Under My Skin - Ilan Bluestone &amp; Jerome Isma-Ae</li>
+<li>Lights - Myon and Shane 54 w/ Aruna</li>
+<li>Take Me Away - Arty ft. Fiora</li>
+<li>Iris - Audien</li>
+<li>The Great Divide (Myon and Shane 54 Summer of Love mix) - Velvetine</li>
+<li>Take Me - Tiesto ft. Kyler England</li>
+<li>Holding On - Maor Levi</li>
+<li>Champs - Moguai</li>
+<li>Atmosphere - Kaskade</li>
+</ol>
+</div>
+
+
+
+<div id="cover_jun2013" class="cover_photo"></div>	
+
+<div class="main">
+	<div id="inner_a"><a href="http://thealanyiu.com/music/2013-06%20mix.mp3"><img src="img/play.png"></a></div>
+	<div id="inner_b"><p>June 2013 Mix</p><small class="timer">1hr 42min</small></div>
+	<div id="inner_c"><p>
+
+<div id="bargraph_a" class="graph_container">
+<div class="bar" style="height:20%;"></div>
+</div>
+<div id="bargraph_b" class="graph_container">
+<div class="bar" style="height:90%;"></div>
+</div>
+<div id="bargraph_c" class="graph_container">
+<div class="bar" style="height:30%;"></div>
+</div>
+
+<table class="mixtype" border="0">
+<tr><td>trance</td><td>house&nbsp;</td><td>altern&nbsp;</td></tr>
+</table>
+		
+</p></div>
+</div>
+
+	
+<div class="description">
+	<span class="description_span"><p>Featuring : &nbsp;&nbsp;Hardwell , Amba Shepherd , Swanky Tunes , Adrian...</p>
+ </span><span class="button_span"><button class="buttons" value="tracklist2">View Tracklist</button></span>
+	</div>
+
+<div id="tracklist2" class="tracklist" style="display:none">
+<ol>
+<li>Trying To Be Cool (The Chainsmokers Remix) - Phoenix</li>
+<li>Whisper - AN21 &amp; Max Vangeli</li>
+<li>Turn It Down (Le Castle Vania remix) - Kaskade, Rebecca &amp; Fiona</li>
+<li>Wild One Two - Jack Back, David Guetta, Sia</li>
+<li>Easy (extended mix) - Mat Zo &amp; Porter Robinson</li>
+<li>Apollo - Hardwell, Amba Shepherd</li>
+<li>Teenage Crime vs. Sweet Disposition - Adrian Lux vs. The Temper Trap</li>
+<li>Never Say Goodbye - Hardwell, Dyro, Bright Lights</li>
+<li>Years (vocal extended mix) - Alesso</li>
+<li>Save The World (Alesso remix) - Swedish House Mafia</li>
+<li>Sunrise (Won't Get Lost) vs. Cannonball - The Aston Shuffle, Tommy Trash vs. Showtek &amp; Justin Prime</li>
+<li>Cannonball - Showtek</li>
+<li>First Aid (Michael Woods - original mix) - Hardwell</li>
+<li>Pair of Dice - Tiesto &amp; Allure</li>
+<li>Into The Light - Sander Van Doorn, Dubvision &amp; Mako, Mariana Bell</li>
+<li>Wayfarer - Audien</li>
+<li>Walter White - Above &amp; Beyond</li>
+<li>This Is What It Feels Like (W&amp;W remix) - Armin Van Buuren</li>
+<li>Every Day - Eric Prydz</li>
+<li>Kidsos vs. Calling (Lose My Mind) vs. Clash - Sebastian Ingrosso, MGMT vs. Sebastian Ingrosso &amp; Alesso feat. Ryan Tedder vs. Alesso</li>
+<li>Falling (Committed To Sparkle Motion) (Dubvision remix) - Discopolis</li>
+<li>Minimal Disaster - Robeen &amp; Jake, Andreew</li>
+<li>The Legend - Swanky Tunes, Matisse &amp; Sadko</li>
+<li>I Could Be The One (John Christian Remix) - Avicii vs Nicky Romero</li>
+<li>If I Lose Myself (Alesso Remix) - Alesso ft. OneRepublic</li>
+<li>No One Knows Who We Are - Kaskade, Swanky Tunes, Lights</li>
+<li>Play It Back (feat Betsie Larkin - Maor Levi remix) - Gabriel &amp; Dresden</li>
+</ol>
+</div>
+
+
+
+
+
+<div id="cover_dec2012" class="cover_photo"></div>	
+	
+<div class="main">
+	<div id="inner_a"><a href="http://thealanyiu.com/music/George_birthday_mix.mp3"><img src="img/play.png"></a></div>
+	<div id="inner_b"><p>December 2012 Mix</p><small class="timer">1hr 52min</small></div>
+	<div id="inner_c"><p>
+
+<div id="bargraph_a" class="graph_container">
+<div class="bar" style="height:10%;"></div>
+</div>
+<div id="bargraph_b" class="graph_container">
+<div class="bar" style="height:60%;"></div>
+</div>
+<div id="bargraph_c" class="graph_container">
+<div class="bar" style="height:50%;"></div>
+</div>
+
+<table class="mixtype" border="0">
+<tr><td>trance</td><td>house&nbsp;</td><td>altern&nbsp;</td></tr>
+</table>
+		
+</p></div>
+</div>
+	
+<div class="description">
+	<span class="description_span"><p>Featuring : &nbsp;&nbsp;Green Velvet , Steve Angello , Axwell , Alesso , Eric P...</p>
+ </span><span class="button_span"><button class="buttons" value="tracklist3">View Tracklist</button></span>
+	</div>
+
+<div id="tracklist3" class="tracklist" style="display:none">
+<ol>
+<li>We Are Mirage - Eric Prydz</li>
+<li>Let It Go (feat Rudy - Axwell remix) - Dirty South</li>
+<li>Praise You 2009 - Fatboy Slim vs Fedde Le Grand</li>
+<li>My Feelings For You - Avicii &amp; Sebastien Drums</li>
+<li>Leave The World Behind (Dimitri Vegas &amp; Like Mike Vs SHM Dark Forest edit) - Axwell, Ingrosso, Angello, Laidback Luke, Deborah Cox</li>
+<li>Teenage Crime (Axwell &amp; Henrik B remode) - Adrian Lux</li>
+<li>Coming Home (Dirty South Club Mix) - Diddy feat. Skylar Grey</li>
+<li>Sweet Disposition (Axwell &amp; Dirty South remix) - The Temper Trap</li>
+<li>Heart Is King - Axwell</li>
+<li>Heart Is King vs. Losing My Religion vs. Punk (Arty Rock-n-Rolla Mix) (M21 &amp; SPd reboot) - Axwell vs. REM vs. Ferry Corsten</li>
+<li>Atom - Nari &amp; Milani</li>
+<li>Greyhound - Swedish House Mafia</li>
+<li>Alive (Blinders Remix) - Dirty South, Thomas Gold, Kate Elsworth</li>
+<li>First Aid (Michael Woods - original mix) - Hardwell</li>
+<li>Louder Than Words - David Guetta &amp; Afrojack Feat. Niles Mason</li>
+<li>Calling (original instrumental mix) - Sebastian Ingrosso &amp; Alesso</li>
+<li>Fire In Your New Shoes (Sultan &amp; Ned Shepard Electric Daisy Remix) - Kaskade ft Dragonette</li>
+<li>Dynasty (Dada Life remix) - Kaskade, Haley</li>
+<li>Silenced By The Night (Alesso remix) - Keane</li>
+<li>Pretender (Deniz Koyu Remix) - Miike Snow</li>
+<li>Spectrum (feat Matthew Koma - extended mix) - Zedd</li>
+<li>The Veldt (Tommy Trash remix) - deadmau5 feat Chris James</li>
+<li>Turn It Down (Le Castle Vania remix) - Kaskade, Rebecca &amp; Fiona</li>
+<li>Save The World (Alesso remix) - Swedish House Mafia</li>
+<li>Years (Vocal Mix) - Alesso Feat. Matthew Koma</li>
+<li>I Could Be The One (Vocal Mix) - Avicii &amp; Nicky Romero</li>
+<li>Don't You Worry Child (feat. John Martin) - Swedish House Mafia</li>
+</ol>
+</div>
+
+
+
+
+
+<div id="cover_aug2012" class="cover_photo"></div>	
+
+<div class="main">
+	<div id="inner_a"><a href="http://thealanyiu.com/music/august_mix.mp3"><img src="img/play.png"></a></div>
+	<div id="inner_b"><p>August 2012 Mix</p><small class="timer">1hr 46min</small></div>
+	<div id="inner_c"><p>
+
+<div id="bargraph_a" class="graph_container">
+<div class="bar" style="height:70%;"></div>
+</div>
+<div id="bargraph_b" class="graph_container">
+<div class="bar" style="height:30%;"></div>
+</div>
+<div id="bargraph_c" class="graph_container">
+<div class="bar" style="height:15%;"></div>
+</div>
+
+<table class="mixtype" border="0">
+<tr><td>trance</td><td>house&nbsp;</td><td>altern&nbsp;</td></tr>
+</table>	
+		
+</p></div>
+</div>
+	
+<div class="description">
+	<span class="description_span"><p>Featuring : &nbsp;&nbsp;Above &amp; Beyond , Deniz Koyu , Andrew Bayer , Mat...</p>
+ </span><span class="button_span"><button class="buttons" value="tracklist4">View Tracklist</button></span>
+	</div>
+
+<div id="tracklist4" class="tracklist" style="display:none">
+<ol>
+<li>Small Moments - Above &amp; Beyond</li>
+<li>You &amp; I - Project 46 and Dubvision feat. Donna Lewis</li>
+<li>Follow You - Deniz Koyu feat. Wynter Gordon</li>
+<li>Embrace Me (Dirty South Remix) - John Dahlback</li>
+<li>Love 20 - Eitro</li>
+<li>Years (Vocal Mix) - Alesso Feat. Matthew Koma</li>
+<li>Million Voices - Otto Knows</li>
+<li>All By Myself - Dubvision</li>
+<li>A Heavy Abacus (Qulinez Remix) - The Joy Formidable</li>
+<li>The Seconds (feat Jano) - Porter Robinson</li>
+<li>Keep Your Secrets (feat Molly Bancroft - Myon &amp; Shane 54 Summer Of Love mix) - Andrew Bayer</li>
+<li>Pressure (Alesso Simply Delicious edit) - Nadia Ali/Starkillers &amp; Alex Kenji</li>
+<li>The Wall (feat Tania Zygar - Arty re-mode remix) - Arty</li>
+<li>Thing Called Love (2011 club mix) - Above &amp; Beyond ft. Richard Bedford</li>
+<li>Superman - Mat Zo</li>
+<li>City of Dreams - Dirty South and Alesso feat. Ruben Haze</li>
+<li>Allein - Pryda</li>
+<li>Namaste - Bluestone</li>
+<li>She Gave Happiness (Arty remix) - D-Mad</li>
+<li>Sun &amp; Moon (club mix) - Above &amp; Beyond, Richard Bedford</li>
+<li>Language (extended mix) - Porter Robinson</li>
+<li>The Wonder - Arty</li>
+<li>Rebound - Arty &amp; Mat Zo</li>
+<li>Pistol Whip - Norin &amp; Rad</li>
+<li>Stars Troll (extended) - Kaskade vs Qulinez</li>
+<li>Eyes (extended mix) - Kaskade ft. Mindy Gledhill</li>
+</ol>
+</div>
+
+
+
+
+
+
+<div id="cover_may2012" class="cover_photo"></div>	
+
+<div class="main">
+	<div id="inner_a"><a href="http://thealanyiu.com/music/2012-05%20mix.mp3"><img src="img/play.png"></a></div>
+	<div id="inner_b"><p>May 2012 Mix</p><small class="timer">0hr 32min</small></div>
+	<div id="inner_c"><p>
+
+<div id="bargraph_a" class="graph_container">
+<div class="bar" style="height:10%;"></div>
+</div>
+<div id="bargraph_b" class="graph_container">
+<div class="bar" style="height:70%;"></div>
+</div>
+<div id="bargraph_c" class="graph_container">
+<div class="bar" style="height:60%;"></div>
+</div>
+
+<table class="mixtype" border="0">
+<tr><td>trance</td><td>house&nbsp;</td><td>altern&nbsp;</td></tr>
+</table>
+		
+</p></div>
+</div>
+	
+<div class="description">
+	<span class="description_span"><p>Featuring : &nbsp;&nbsp;Dragonette , Wynter Gordon, Porter Robinson...</p>
+ </span><span class="button_span"><button class="buttons" value="tracklist5">View Tracklist</button></span>
+	</div>
+
+<div id="tracklist5" class="tracklist" style="display:none">
+<ol>
+<li>The Night Out (Madeon Remix) - Martin Solveig</li>
+<li>Let It Go (The Knocks Remix) - Dragonette</li>
+<li>Everytime (Disfunktion Remix) - NewYorkFM feat. Natalie Gauci</li>
+<li>Silenced By The Night (Alesso Remix) - Keane</li>
+<li>Still Getting Younger (Third Party Remix) - Wynter Gordon</li>
+<li>Ray of Love (Denzal Park Remix) - Tune In Tokyo</li>
+<li>Walls (feat. Quilla) - Sultan &amp; Ned Shepard</li>
+<li>Language - Porter Robinson</li>
+</ol>
+</div>
+
+
+
+
+
+<div id="cover_mar2012" class="cover_photo"></div>	
+
+<div class="main">
+	<div id="inner_a"><a href="http://thealanyiu.com/music/march_2012_mix.mp3"><img src="img/play.png"></a></div>
+	<div id="inner_b"><p>March 2012 Mix</p><small class="timer">1hr 6min</small></div>
+	<div id="inner_c"><p>
+
+<div id="bargraph_a" class="graph_container">
+<div class="bar" style="height:10%;"></div>
+</div>
+<div id="bargraph_b" class="graph_container">
+<div class="bar" style="height:80%;"></div>
+</div>
+<div id="bargraph_c" class="graph_container">
+<div class="bar" style="height:10%;"></div>
+</div>
+
+<table class="mixtype" border="0">
+<tr><td>trance</td><td>house&nbsp;</td><td>altern&nbsp;</td></tr>
+</table>
+		
+</p></div>
+</div>
+	
+<div class="description">
+	<span class="description_span"><p>Featuring : &nbsp;&nbsp;Thomas Gold , Adrian Lux , Zedd , M83 , Hardwell...</p>
+ </span><span class="button_span"><button class="buttons" value="tracklist6">View Tracklist</button></span>
+	</div>
+
+<div id="tracklist6" class="tracklist" style="display:none">
+<ol>
+<li>Eyes Wide Open - Dirty South &amp; Thomas Gold feat. Kate Elsworth</li>
+<li>Beating of My Heart (Matisse &amp; Sadko Remix) - M-3ox feat. Heidrun</li>
+<li>Stars Come Out (Tim Mason Remix) - Zedd</li>
+<li>We're All No One (feat. Afrojack and Steve Aoki) (Hook N Sling Remix) - NERVO</li>
+<li>Feel - Cicada, Third Party</li>
+<li>In My Mind (Axwell Mix) - Ivan Gough &amp; Feenixpawl feat. Georgi Kay</li>
+<li>Alive (Blinders Remix) - Dirty South &amp; Thomas Gold feat. Kate Elsworth</li>
+<li>Alive (Basto Remix) - Adrian Lux feat. The Good Natured</li>
+<li>You've Got The Love (Mark Knight Remix) - Florence And The Machine</li>
+<li>Midnight City (Eric Prydz Remix) - M83</li>
+<li>Turn It - Fedde Le Grand, Deniz Koyu, &amp; Johan Wedel</li>
+<li>Breakin' A Sweat (Zedd Remix) - Skrillex feat. The Doors</li>
+<li>Can't Stop Me - Afrojack &amp; Shermanology</li>
+<li>Spaceman - Hardwell</li>
+<li>Raise Your Head - Alesso</li>
+<li>Chasin' - Sander Van Doorn</li>
+<li>Keep It Coming (Dmitry KO Remix) - Starkillers &amp; Nadia Ali</li>
+<li>Ladi Dadi (Tommy Trash Remix) - Steve Aoki feat. Wynter Gordon</li>
+<li>Trio - Arty, Matisse &amp; Sadko</li>
+<li>Wild One Two - Jack Back feat. David Guetta, Nicky Romero, &amp; Sia)</li>
+<li>The Night Out (Madeon Remix) - Martin Solveig</li>
+<li>Language - Porter Robinson</li>
+</ol>
+</div>
+
+<br><br><br>
+
+
+
+<script>
+  $(".buttons").click(function () {
+				var divname= this.value;
+    $("#"+divname).toggle(400);
+  });
+	
+	 $(".buttons").click(function () {
+		  $(this).text(function(i, text){
+      return text === "View Tracklist" ? "Hide Tracklist" : "View Tracklist";
+		})
+		});
+</script>
+
+</body>
